@@ -1,15 +1,8 @@
-function getFullName(userObj: {firstName:string, lastName:string}): string {
-    return `${userObj.firstName} ${userObj.lastName}`;
-};
+const skills: [number, string] = [1, 'Admin']
 
-const USER = {
-    firstName: 'Red',
-    lastName: 'Bull',
-    age: 42,
-    skills: {
-        dev: true,
-        devonly: false,
-    }
-}
+const readonly1: readonly [string, number, string] = ['red', 1, 'green']
 
-console.log(getFullName(USER))
+
+const arrString: string[] = ['dev', 'devops']
+
+const arrString2: Array<string> = ['dev', 'devops']
