@@ -1,6 +1,15 @@
-let revenue:number = 1_000
-let bonus:number = 500
+function getFullName(userObj: {firstName:string, lastName:string}): string {
+    return `${userObj.firstName} ${userObj.lastName}`;
+};
 
-let res: number = revenue + bonus
+const USER = {
+    firstName: 'Red',
+    lastName: 'Bull',
+    age: 42,
+    skills: {
+        dev: true,
+        devonly: false,
+    }
+}
 
-console.log(res);
+console.log(getFullName(USER))
