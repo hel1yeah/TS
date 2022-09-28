@@ -1,13 +1,15 @@
-enum requestType {
-    GET = 'get',
-    POST = 'post',
-    PUT = 'put',
-    DELETE = 'delete'
+type User = {
+    name: string,
+    age: number,
+    skills: string[]
 }
 
-function fetchRequestAuth( url: string, method: 'post' | 'get' | 'put' ): string | object{
-    return url.toUpperCase()
-
+type Role = {
+    id: number
 }
 
-fetchRequestAuth('s', 'put')
+const user: User = {
+    name: 'John',
+    age: 36,
+    skills: ['vue', 'ts']
+}
