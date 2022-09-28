@@ -1,8 +1,19 @@
-const skills: [number, string] = [1, 'Admin']
+function testWithFetch(url: string | number){
+    if (typeof url === 'string') {
+        console.log(url.toUpperCase())
+    } else {
+        console.log(url)
+    }
+}
 
-const readonly1: readonly [string, number, string] = ['red', 1, 'green']
+function test2(err: string | string[]){
+    if (Array.isArray(err)){
+        console.log(err)
+    } else {
 
+    }
+}
 
-const arrString: string[] = ['dev', 'devops']
+function object1(obj: { a:number } | { b: number }){
 
-const arrString2: Array<string> = ['dev', 'devops']
+}
