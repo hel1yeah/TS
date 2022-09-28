@@ -1,16 +1,12 @@
 "use strict";
-var StatusCode;
-(function (StatusCode) {
-    StatusCode[StatusCode["SUCCESS"] = 300] = "SUCCESS";
-    StatusCode[StatusCode["IN_PROGRESS"] = 200] = "IN_PROGRESS";
-    StatusCode[StatusCode["FAILURE"] = 220] = "FAILURE";
-})(StatusCode || (StatusCode = {}));
-const res = {
-    message: 'Success message',
-    statusCode: 1,
-};
-if (res.statusCode === StatusCode.SUCCESS) {
-    console.log('SUCCESS');
+var requestType;
+(function (requestType) {
+    requestType["GET"] = "get";
+    requestType["POST"] = "post";
+    requestType["PUT"] = "put";
+    requestType["DELETE"] = "delete";
+})(requestType || (requestType = {}));
+function fetchRequestAuth(url, method) {
+    return url.toUpperCase();
 }
-const response = "RED" /* testing.red */;
-console.log(response);
+fetchRequestAuth('s', 'put');

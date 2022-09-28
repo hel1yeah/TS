@@ -1,19 +1,13 @@
-function testWithFetch(url: string | number){
-    if (typeof url === 'string') {
-        console.log(url.toUpperCase())
-    } else {
-        console.log(url)
-    }
+enum requestType {
+    GET = 'get',
+    POST = 'post',
+    PUT = 'put',
+    DELETE = 'delete'
 }
 
-function test2(err: string | string[]){
-    if (Array.isArray(err)){
-        console.log(err)
-    } else {
-
-    }
-}
-
-function object1(obj: { a:number } | { b: number }){
+function fetchRequestAuth( url: string, method: 'post' | 'get' | 'put' ): string | object{
+    return url.toUpperCase()
 
 }
+
+fetchRequestAuth('s', 'put')
