@@ -1,9 +1,7 @@
-const skills: string[] = ['Front', 'Js', '1'];
+//  typles = кортедж
 
-for (const skill of skills) {
-  console.log(skill);
-}
+const skill = [1, 'Front']
 
+const [id, SkillName] = skill
 
-
-console.log(skills.filter((s) => s !== 'Front').map((s) => {}).reduce((a, b) => a + b));
+const arr: [number, string, ...boolean[]] = [1, 'Front', true, false]
