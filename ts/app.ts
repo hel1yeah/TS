@@ -1,20 +1,9 @@
-let test: {
-  officeId: number,
-  isOpened: false,
-  contacts: {
-    phone: string,
-    email: string,
-    address: {
-      city: string,
-    }
-} = {
-	"officeId": 45,
-	"isOpened": false,
-	"contacts": {
-		"phone": "+79100000000",
-		"email": "my@email.ru",
-		"address": {
-			"city": "Москва"
-		}
-	}
+const skills: string[] = ['Front', 'Js', '1'];
+
+for (const skill of skills) {
+  console.log(skill);
 }
+
+
+
+console.log(skills.filter((s) => s !== 'Front').map((s) => {}).reduce((a, b) => a + b));
