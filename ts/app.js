@@ -1,14 +1,10 @@
 "use strict";
-function getFullName(fN, sN) {
-    if (typeof fN !== 'string') {
-        throw new Error('!!!!!');
-    }
-    return `${fN} ${sN}`;
+function getFullName(user) {
+    return `${user.fN} ${user.city}`;
 }
-const arrFunctions = (one, twoo) => {
-    return `${one} ${twoo} Arrow`;
+const user = {
+    fN: 'Yuri',
+    city: 'Brovary',
+    age: 33
 };
-arrFunctions('Yuri', 'Larsen');
-getFullName('Yuri', 'Larsen');
-console.log(arrFunctions('Yuri', 'Larsen'));
-console.log(getFullName('true', 'false'));
+console.log(getFullName(user));
