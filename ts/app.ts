@@ -1,15 +1,32 @@
-type User = {
-    name: string,
-    age: number,
-    skills: string[]
+interface IPayment {
+    sum: number;
+    from: number;
+    to: number;
+
+}
+interface IPaymentRequest extends IPayment {}
+
+enum PaymentStatus {
+    Success = 'success',
+    Failure = 'failed',
 }
 
-type Role = {
-    id: number
+interface IDataSuccess extends  IPayment{
+    databaseId: number,
+
+}
+interface IDataFailed {
+    errorMessage: string,
+    errorCode: number,
+
 }
 
-const user: User = {
-    name: 'John',
-    age: 36,
-    skills: ['vue', 'ts']
+interface IResponseSuccess {
+    status: PaymentStatus.Success,
+    data: IDataSuccess,
+}
+
+interface IResponseFailed {
+    status: PaymentStatus.Failure,
+    data: IDataFailed,
 }
