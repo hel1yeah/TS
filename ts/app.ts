@@ -1,6 +1,21 @@
-//  typles = кортедж
+enum StatusCode {
+  SUCCESS = 400,
+  IN_PROGRESS = 3,
+  FAILURE = 'failure',
+}
 
-const skill: readonly ( number | string)[] = [1, 'Front']
+const res = {
+  message: 'pay success',
+  status: 300,
+}
 
 
-const fruit: ReadonlyArray<string> = ['red', 'green', 'yellow']
+if(res.status === StatusCode.SUCCESS) {
+  console.log(StatusCode.SUCCESS);
+  console.log('xdsdsdsd');
+  
+}
+
+// 13 success
+// 2 pending
+// 3 failure
