@@ -1,10 +1,11 @@
 "use strict";
 function getFullName(user) {
-    return `${user.fN} ${user.city}`;
+    return `${user.first} ${user.city}`;
 }
 const user = {
-    fN: 'Yuri',
+    first: 'Yuri',
     city: 'Brovary',
-    age: 33
+    age: 33,
+    red: 'red',
 };
 console.log(getFullName(user));
