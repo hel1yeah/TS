@@ -1,32 +1,7 @@
-interface IPayment {
-    sum: number;
-    from: number;
-    to: number;
+const red = 'red'
+const num:number = 1
+const num2 = 2
 
-}
-interface IPaymentRequest extends IPayment {}
 
-enum PaymentStatus {
-    Success = 'success',
-    Failure = 'failed',
-}
-
-interface IDataSuccess extends  IPayment{
-    databaseId: number,
-
-}
-interface IDataFailed {
-    errorMessage: string,
-    errorCode: number,
-
-}
-
-interface IResponseSuccess {
-    status: PaymentStatus.Success,
-    data: IDataSuccess,
-}
-
-interface IResponseFailed {
-    status: PaymentStatus.Failure,
-    data: IDataFailed,
-}
+let res:number = num2 + num
+console.log(res);

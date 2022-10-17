@@ -1,6 +1,5 @@
 "use strict";
-var PaymentStatus;
-(function (PaymentStatus) {
-    PaymentStatus["Success"] = "success";
-    PaymentStatus["Failure"] = "failed";
-})(PaymentStatus || (PaymentStatus = {}));
+const red = 'red';
+const num = 1;
+let res = red + ' ' + num;
+console.log(res);
